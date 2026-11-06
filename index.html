@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediKataru｜医療を、わかる言葉で。次の医療へ。</title>
+  <meta name="description" content="MediKataruは、医師・看護師の説明をAIが聞き取り、患者・家族にわかる言葉へ翻訳・要約。許可した家族と共有し、必要なときは医療者向けサマリーに切り替えて次の医療へつなぎます。">
+  <meta property="og:title" content="MediKataru｜医療を、わかる言葉で。次の医療へ。">
+  <meta property="og:description" content="「説明した」から「伝わった」へ。医療者の言葉を、患者・家族の理解に変えるAI。">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0b4fd6">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ Header ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="MediKataru トップへ">
+        <span class="logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M6 9a5 5 0 0 1 5-5h10a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5h-6l-5 5v-5a4 4 0 0 1-4-4z" fill="currentColor"/><path d="M12 13h8M16 9v8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </span>
+        <span class="logo__text">Medi<b>Kataru</b></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="メインメニュー">
+        <a href="#problem">課題</a>
+        <a href="#solution">サービス</a>
+        <a href="#demo">デモ</a>
+        <a href="#story">ストーリー</a>
+        <a href="#difference">差別化</a>
+        <a href="#vision">ビジョン</a>
+        <a href="#contact" class="btn btn--primary btn--sm nav__cta">お問い合わせ</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="blob blob--1"></span><span class="blob blob--2"></span><span class="blob blob--3"></span>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow reveal">AI × 医療コミュニケーション</p>
+          <h1 class="hero__title reveal">
+            <span class="nw">医療を、</span><span class="nw"><span class="grad">わかる言葉</span>で。</span><br>
+            次の医療へ。
+          </h1>
+          <p class="hero__lead reveal">
+            医師や看護師の説明をAIが聞き取り、患者さん本人やご家族にわかる平易な言葉へ翻訳・要約。<br class="pc">
+            「聞いて終わり」にせず、振り返り・家族との共有・次の医療者への引き継ぎまでつなぎます。
+          </p>
+          <div class="hero__actions reveal">
+            <a href="#demo" class="btn btn--primary btn--lg">
+              デモを体験する
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#contact" class="btn btn--ghost btn--lg">導入について相談する</a>
+          </div>
+          <ul class="hero__tags reveal" aria-label="特長">
+            <li>平易な言葉へ翻訳</li>
+            <li>家族と共有</li>
+            <li>医療者向けサマリー</li>
+          </ul>
+        </div>
+
+        <!-- Phone mock -->
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="phone__head">
+                <span class="phone__date">11月6日（金）外来・循環器内科</span>
+                <span class="phone__rec"><i></i>説明を記録済み</span>
+              </div>
+              <div class="phone__switch">
+                <span class="is-active">患者・家族向け</span>
+                <span>医療者向け</span>
+              </div>
+              <div class="phone__card">
+                <p class="phone__label">何が起きている？</p>
+                <p>心臓の力が少し弱くなっています。</p>
+              </div>
+              <div class="phone__card">
+                <p class="phone__label">何をする？</p>
+                <p>体に水がたまらないよう、お薬を調整します。</p>
+              </div>
+              <div class="phone__card phone__card--warn">
+                <p class="phone__label">何に注意する？</p>
+                <p>息苦しさ・急な体重増加があれば早めに受診。</p>
+              </div>
+              <div class="phone__share">
+                <span class="avatar">妻</span><span class="avatar avatar--b">長女</span>
+                <small>2人と共有中</small>
+              </div>
+            </div>
+          </div>
+          <div class="float-card float-card--1">
+            <span class="float-card__icon">🩺</span>
+            <div><b>EF低下・volume overload</b><small>医師の説明</small></div>
+          </div>
+          <div class="float-card float-card--2">
+            <span class="float-card__icon">💬</span>
+            <div><b>「体に余分な水分がたまっている」</b><small>わかる言葉に翻訳</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Problem ============ -->
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__num">01 — Problem</p>
+          <h2 class="section__title">医療者の説明は、<br>患者・家族に<span class="mark">届ききっていない。</span></h2>
+          <p class="section__lead">そして、それはこれからも続き、むしろ大きくなっていく問題です。</p>
+        </div>
+
+        <div class="stats">
+          <article class="stat reveal">
+            <p class="stat__value"><span class="count" data-from="0" data-to="40">40</span>〜<span class="count" data-from="0" data-to="80">80</span><small>%</small></p>
+            <p class="stat__text">医療者から伝えられた情報のうち、<b>直後に忘れられる</b>と報告されている割合。高齢・不安を抱える患者ほど不正確・不十分になりがち。</p>
+            <p class="stat__src">出典：Kessels RPC. J R Soc Med. 2003;96(5):219–222</p>
+          </article>
+          <article class="stat reveal">
+            <p class="stat__value">約<span class="count" data-from="0" data-to="18">18</span><small>%</small></p>
+            <p class="stat__text">2025年、<b>75歳以上が全人口に占める割合</b>の見込み。</p>
+            <p class="stat__src">出典：厚生労働省「我が国の人口について」</p>
+          </article>
+          <article class="stat reveal">
+            <p class="stat__value">約<span class="count" data-from="0" data-to="35">35</span><small>%</small></p>
+            <p class="stat__text">2040年、<b>65歳以上が全人口に占める割合</b>の見込み。説明を受ける側の理解負荷はさらに高まる。</p>
+            <p class="stat__src">出典：厚生労働省「我が国の人口について」</p>
+          </article>
+        </div>
+        <p class="note reveal">日本でも、ヘルスリテラシー（健康情報を理解・活用する力）が低い人ほど医師の説明の理解が低いことが示唆されています。（Health Lit Res Pract. 2024;8(3):e175–e183）</p>
+
+        <div class="pain-grid">
+          <article class="pain reveal">
+            <div class="pain__icon">🧓</div>
+            <h3>患者</h3>
+            <p class="pain__now">説明を聞いても難しくて理解できず、後で内容を思い出せない</p>
+            <p class="pain__want"><span>wants</span>会話を平易に要約してほしい</p>
+          </article>
+          <article class="pain reveal">
+            <div class="pain__icon">👨‍👩‍👧</div>
+            <h3>家族</h3>
+            <p class="pain__now">同席できず、本人から聞いても要点がわからない</p>
+            <p class="pain__want"><span>wants</span>許可されたメンバーへ共有してほしい</p>
+          </article>
+          <article class="pain reveal">
+            <div class="pain__icon">🩺</div>
+            <h3>医療者</h3>
+            <p class="pain__now">何度も同じ説明が必要。何度聞いても正しい情報が得られない</p>
+            <p class="pain__want"><span>wants</span>患者向け・医療者向けサマリーを切り替えたい</p>
+          </article>
+          <article class="pain reveal">
+            <div class="pain__icon">🛡️</div>
+            <h3>医療安全</h3>
+            <p class="pain__now">理解不足が検査・処置・治療に影響する可能性がある</p>
+            <p class="pain__want"><span>wants</span>「わかったつもり」を減らしたい</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Insight ============ -->
+    <section class="insight">
+      <div class="container insight__inner reveal">
+        <div class="insight__left">
+          <p class="insight__badge">Evidence</p>
+          <p class="insight__text">
+            AHRQ（米国医療研究・品質調査機構）は、患者の理解を確認する方法として<b>Teach-back</b>（患者自身の言葉で説明し直してもらう手法）を推奨。理解・服薬遵守・満足度の改善につながるとされています。
+          </p>
+          <a class="insight__src" href="https://www.ahrq.gov/health-literacy/improve/precautions/tool5.html" target="_blank" rel="noopener">Use the Teach-Back Method: Tool 5 | AHRQ ↗</a>
+        </div>
+        <div class="insight__arrow" aria-hidden="true">
+          <svg viewBox="0 0 96 96"><path d="M44 20H32l21 28-21 28h12l21-28zM8 76h12l21-28L20 20H8l21 28zm60-56H56l21 28-21 28h12l21-28z" fill="currentColor"/></svg>
+        </div>
+        <div class="insight__right">
+          <p class="insight__label">だから必要なのは</p>
+          <p class="insight__answer">医療者の言葉を<br><span>“生活者の言葉”</span>に変える仕組み。</p>
+          <p class="insight__sub">MediKataruは、この発想をAIで補助します。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Solution ============ -->
+    <section class="section section--tint" id="solution">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__num">02 — Solution</p>
+          <h2 class="section__title">「説明した」から<br class="sp"><span class="grad">「伝わった」</span>へ。</h2>
+          <p class="section__lead">MediKataruは、医療者の言葉を患者・家族の理解に変えます。</p>
+        </div>
+
+        <ol class="flow">
+          <li class="flow__step reveal">
+            <span class="flow__no">1</span>
+            <div class="flow__icon"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+            <h3>医療スタッフの説明</h3>
+            <p>医師・看護師などが、患者さんに病状や治療を説明。患者同意のもとで録音を開始します。</p>
+          </li>
+          <li class="flow__step reveal">
+            <span class="flow__no">2</span>
+            <div class="flow__icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9l-4.7 1.8L12 15.5l-1.8-4.7L5.5 9l4.7-1.3zM18 15l.9 2.1L21 18l-2.1.9L18 21l-.9-2.1L15 18l2.1-.9z"/></svg></div>
+            <h3>AIが聞き取り・翻訳・要約</h3>
+            <p>音声をテキスト化し、専門用語を平易化。重要な内容を整理します。</p>
+          </li>
+          <li class="flow__step flow__step--split reveal">
+            <span class="flow__no">3</span>
+            <div class="flow__pair">
+              <div>
+                <div class="flow__icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.4"/><path d="M15.5 14.2A5 5 0 0 1 21 19"/></svg></div>
+                <h3>患者・家族向け</h3>
+                <p>わかる言葉で振り返り、許可したメンバーと共有。</p>
+              </div>
+              <div>
+                <div class="flow__icon flow__icon--violet"><svg viewBox="0 0 24 24"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="11" r="2"/></svg></div>
+                <h3>医療者向け</h3>
+                <p>ボタンひとつで医学的なサマリーに切り替え。</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+
+        <figure class="diagram reveal">
+          <div class="diagram__frame">
+            <img src="assets/system-overview.png" alt="MediKataruのシステム連携イメージ。医療機関（病院・診療所・訪問看護）からの診療説明・病状説明・退院説明を、MediKataruプラットフォームが音声取得、文字起こし、AI平易化・要約、Dual Summary、Medical Storyの5段階で処理し、患者・家族・次の医療者へそれぞれ最適な形で届ける。" loading="lazy" width="1672" height="941">
+          </div>
+          <figcaption>システム連携イメージ：患者・家族と医療機関をつなぎ、医療の説明を“わかる言葉”に変える</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ Demo ============ -->
+    <section class="section" id="demo">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__num">03 — Demo</p>
+          <h2 class="section__title">同じ説明を、<br>ワンタップで<span class="mark">ふたつの言葉に。</span></h2>
+          <p class="section__lead">診察室での医師の説明が、どう変わるのか。モードを切り替えて体験してください。</p>
+        </div>
+
+        <div class="demo reveal">
+          <div class="demo__source">
+            <div class="demo__source-head">
+              <span class="rec-dot"></span>
+              <span>診察中の医師の説明（音声→テキスト）</span>
+            </div>
+            <p class="demo__quote">
+              「EFが低下しており、<mark>volume overload</mark>があります。<mark>利尿薬</mark>を調整しましょう。<mark>呼吸苦</mark>や<mark>体重増加</mark>があれば早めに受診してください。」
+            </p>
+            <div class="demo__wave" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+          </div>
+
+          <div class="demo__arrow" aria-hidden="true">
+            <span>AI</span>
+          </div>
+
+          <div class="demo__output">
+            <div class="segmented" role="tablist" aria-label="サマリーの表示モード">
+              <button role="tab" class="segmented__btn is-active" aria-selected="true" data-mode="patient" id="tab-patient" aria-controls="demoPanel">患者・家族モード</button>
+              <button role="tab" class="segmented__btn" aria-selected="false" data-mode="pro" id="tab-pro" aria-controls="demoPanel">医療者モード</button>
+              <span class="segmented__thumb" aria-hidden="true"></span>
+            </div>
+            <div class="demo__panel" id="demoPanel" role="tabpanel" aria-live="polite" aria-labelledby="tab-patient"></div>
+          </div>
+        </div>
+        <p class="note note--center reveal">※表示内容は資料記載のサンプルに基づくイメージです。実際の出力とは異なる場合があります。</p>
+      </div>
+    </section>
+
+    <!-- ============ Value ============ -->
+    <section class="section section--tint" id="value">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__num">04 — Value</p>
+          <h2 class="section__title">関わるすべての人に、<br class="sp">価値を。</h2>
+        </div>
+        <div class="value-grid">
+          <article class="value reveal">
+            <span class="value__who value__who--blue">患者本人</span>
+            <h3>医療の説明を理解し、<br>振り返れる</h3>
+            <p>医師・看護師の話をAIが平易な言葉に翻訳・要約。病状や治療方針を後から確認できます。</p>
+          </article>
+          <article class="value reveal">
+            <span class="value__who value__who--teal">家族</span>
+            <h3>離れていても、<br>本人と同じ情報を共有</h3>
+            <p>患者さんが許可したメンバーへ説明内容を共有。同席できないご家族も、病状や今後の予定を把握しやすくなります。</p>
+          </article>
+          <article class="value reveal">
+            <span class="value__who value__who--violet">医療者</span>
+            <h3>説明内容を再利用し、<br>伝え直しを減らす</h3>
+            <p>医療者用ボタンで医学的なサマリーに切り替え。次回診察や入退院時の情報共有に活用できます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Story ============ -->
+    <section class="section" id="story">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__num">05 — Vision Story</p>
+          <h2 class="section__title">ある家族の、<br class="sp">MediKataruのある日常。</h2>
+          <p class="section__lead">78歳の男性。妻と二人暮らし。心不全で近所の病院に通院中。長女は東京で暮らしている。</p>
+        </div>
+
+        <div class="story reveal">
+          <div class="story__tabs" role="tablist" aria-label="ストーリーの場面">
+            <button role="tab" class="story__tab is-active" aria-selected="true" data-scene="0"><span>Scene 1</span>ある日の外来</button>
+            <button role="tab" class="story__tab" aria-selected="false" data-scene="1"><span>Scene 2</span>容態が急変</button>
+            <button role="tab" class="story__tab" aria-selected="false" data-scene="2"><span>Scene 3</span>退院後</button>
+            <span class="story__progress" aria-hidden="true"><i></i></span>
+          </div>
+
+          <div class="story__scenes">
+            <article class="scene is-active" data-scene="0" role="tabpanel">
+              <div class="scene__text">
+                <p>医師から「心臓の機能が少し落ちています。薬を調整しましょう」と説明を受ける。本人はその場ではうなずいていた。</p>
+                <p>しかし家に帰ると、<b>「結局、何が悪かったんだっけ」</b>と妻に話す。そこでMediKataruを開く。</p>
+                <p>本人は内容を妻と一緒に確認。共有を許可している長女にも同じ内容が届き、<b>東京にいながら父親の病状と今後の注意点を理解できる。</b></p>
+              </div>
+              <div class="scene__card">
+                <p class="scene__mode scene__mode--patient">患者・家族向け</p>
+                <p class="scene__summary">「心臓の力が少し弱くなっています。体に水がたまりやすくならないよう、薬を調整します。息苦しさや急な体重増加があれば早めに受診してください」</p>
+                <p class="scene__meta">👨‍👩‍👧 妻・長女と共有済み</p>
+              </div>
+            </article>
+
+            <article class="scene" data-scene="1" role="tabpanel" hidden>
+              <div class="scene__text">
+                <p>数か月後、心不全が悪化し救急搬送される。救急外来で家族は<b>「これまでの経過をうまく説明できない」</b>という状況に。</p>
+                <p>そこでMediKataruの<b>「医療者向け」ボタン</b>を押す。これまで医師や看護師から受けた説明履歴が、医療者が短時間で把握できる形にまとまる。</p>
+                <p>入院後も、医師や看護師から受けた説明はMediKataruに残っていく。</p>
+              </div>
+              <div class="scene__card scene__card--pro">
+                <p class="scene__mode scene__mode--pro">医療者向けサマリー</p>
+                <p class="scene__summary">「心不全で外来通院中。利尿薬調整歴あり。最近の説明では体重増加・呼吸苦出現時の早期受診を指示」</p>
+                <p class="scene__meta">🔒 患者の許可のもと表示</p>
+              </div>
+            </article>
+
+            <article class="scene" data-scene="2" role="tabpanel" hidden>
+              <div class="scene__text">
+                <p>退院の日。本人のMediKataruには、<b>「今回なぜ入院したのか」「どんな治療を受けたのか」「退院後に何に注意すればよいのか」</b>がわかる言葉で整理される。長女も同じ内容を確認できる。</p>
+                <p>退院後、訪問看護師が自宅を訪れたときには、患者の許可のもと医療者向けサマリーを確認する。</p>
+                <p>病院、診療所、訪問看護、家族。それぞれが別々の場所にいても、<b>患者を中心に「説明されたこと」がつながっている。</b></p>
+              </div>
+              <div class="scene__card scene__card--link">
+                <p class="scene__mode scene__mode--teal">つながるケア</p>
+                <ul class="scene__nodes">
+                  <li>🏥 病院</li><li>🏠 診療所</li><li>🚗 訪問看護</li><li>👨‍👩‍👧 家族</li>
+                </ul>
+                <p class="scene__meta">患者を中心に「説明されたこと」を共有</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <blockquote class="manifesto reveal">
+          <p>MediKataruが目指すのは、医療データを集めることではない。<br>
+          医療者が伝えた言葉を、患者が理解できる言葉として残し、<br class="pc">家族と共有し、必要なときには次の医療者へつなぐこと。</p>
+          <footer>「説明した」で終わらない医療へ。</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============ Difference ============ -->
+    <section class="section section--dark" id="difference">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__num">06 — Difference</p>
+          <h2 class="section__title">守るべき、<br class="sp">3つの差別化軸。</h2>
+        </div>
+
+        <div class="diff-grid">
+          <article class="diff reveal">
+            <p class="diff__no">01</p>
+            <h3>Plain-language Translation</h3>
+            <p class="diff__ja">医学的意味を保ったまま、非医療者の言葉へ翻訳</p>
+            <div class="diff__example">
+              <p class="diff__before">EFが低下しておりvolume overloadがあります</p>
+              <p class="diff__after">心臓の力が弱くなり、体に余分な水分がたまっている状態です</p>
+            </div>
+            <p>単に短く要約するのではなく、「翻訳」を製品の中心に据えます。</p>
+          </article>
+          <article class="diff reveal">
+            <p class="diff__no">02</p>
+            <h3>Dual Summary</h3>
+            <p class="diff__ja">同じ説明から、ふたつのサマリーをワンタップで</p>
+            <ul class="diff__list">
+              <li><b>患者・家族モード</b>「何が起きている？」「何をする？」「何に注意する？」</li>
+              <li><b>医療者モード</b>病状・治療・経過・Planを医学用語で整理</li>
+            </ul>
+          </article>
+          <article class="diff reveal">
+            <p class="diff__no">03</p>
+            <h3>Medical Story</h3>
+            <p class="diff__ja">「説明された内容」を時系列で蓄積し、AIが再要約</p>
+            <ol class="diff__timeline">
+              <li>外来</li><li>入院</li><li>病状説明</li><li>退院</li><li>在宅</li><li>再診</li>
+            </ol>
+            <p>1回の診察で終わらせず、数か月・数年単位の経過を再要約します。</p>
+          </article>
+        </div>
+
+        <div class="compare reveal">
+          <div class="compare__col compare__col--other">
+            <p class="compare__label">一般的な競合</p>
+            <p class="compare__text">今日の診察を<br>忘れないAI</p>
+            <p class="compare__sub">診察を「記録・要約」する</p>
+          </div>
+          <div class="compare__vs">vs</div>
+          <div class="compare__col compare__col--us">
+            <p class="compare__label">MediKataru</p>
+            <p class="compare__text">これまでの医療を理解し、<br>次の医療へ伝えるAI</p>
+            <p class="compare__sub">医療者の言葉を患者の理解に変え、その理解を家族と次の医療へつなぐ</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Future ============ -->
+    <section class="section" id="future">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__num">07 — Roadmap</p>
+          <h2 class="section__title">これからの構想</h2>
+        </div>
+        <ol class="roadmap">
+          <li class="roadmap__item reveal">
+            <span class="roadmap__step">STEP 1</span>
+            <h3>患者ごとの「説明の履歴」を蓄積</h3>
+            <p>外来・入院・在宅で受けた説明を時系列で整理し、過去の経過を患者・家族が振り返れるようにします。</p>
+          </li>
+          <li class="roadmap__item reveal">
+            <span class="roadmap__step">STEP 2</span>
+            <h3>医療者向けの経過サマリーを高度化</h3>
+            <p>複数回の説明履歴から、入退院・救急受診時に必要な経過を自動でまとめ、患者の許可のもと医療者と共有します。</p>
+          </li>
+          <li class="roadmap__item reveal">
+            <span class="roadmap__step">STEP 3</span>
+            <h3>多様な医療・介護の場面へ展開</h3>
+            <p>在宅医療、訪問看護、介護、薬局などへ利用を広げ、患者中心に説明内容が引き継がれる仕組みを目指します。</p>
+          </li>
+        </ol>
+        <div class="scope reveal">
+          <span class="scope__icon" aria-hidden="true">i</span>
+          <p><b>初期のフォーカスについて</b>　初期は、採血データ・画像データの統合保存や、電子カルテを代替するPHR（Personal Health Record：個人の健康記録）基盤の構築は対象外です。医療者の「説明内容」の共有に集中します。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Vision ============ -->
+    <section class="vision" id="vision">
+      <div class="container">
+        <div class="vision__grid">
+          <div class="vision__block reveal">
+            <p class="vision__label">事業理念</p>
+            <h2>医療者の言葉を、<br>すべての人が理解できる言葉へ。</h2>
+            <p>医療者と患者・家族の間にある「言葉の壁」をなくし、誰もが自分や大切な人の病状・治療を理解し、納得して医療に向き合えるようにする。</p>
+          </div>
+          <div class="vision__block reveal">
+            <p class="vision__label">事業ビジョン</p>
+            <h2>医療の説明が、<br>患者と家族の安心につながる社会へ。</h2>
+            <p>医療者から受けた説明を、患者がいつでも振り返り、許可した家族と共有できる。必要なときには医療者向けの情報へ切り替え、診察・入院・在宅など、医療の場が変わっても説明の内容が引き継がれる未来を目指す。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section class="section" id="contact">
+      <div class="container contact">
+        <div class="contact__copy reveal">
+          <p class="section__num">Contact</p>
+          <h2 class="section__title">一緒に、<br>「伝わる医療」を<br>つくりませんか。</h2>
+          <p>医療機関・訪問看護ステーション・介護事業者・研究機関の皆さまからの、実証導入やパートナーシップのご相談をお待ちしています。</p>
+          <ul class="contact__points">
+            <li>実証（PoC）へのご参加</li>
+            <li>サービス資料のご請求</li>
+            <li>連携・協業のご相談</li>
+          </ul>
+        </div>
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="form__row">
+            <label for="f-type">ご相談内容 <em>必須</em></label>
+            <select id="f-type" name="type" required>
+              <option value="">選択してください</option>
+              <option>実証（PoC）への参加</option>
+              <option>資料請求</option>
+              <option>連携・協業の相談</option>
+              <option>その他</option>
+            </select>
+          </div>
+          <div class="form__2col">
+            <div class="form__row">
+              <label for="f-org">ご所属 <em>必須</em></label>
+              <input id="f-org" name="org" type="text" autocomplete="organization" placeholder="〇〇病院" required>
+            </div>
+            <div class="form__row">
+              <label for="f-name">お名前 <em>必須</em></label>
+              <input id="f-name" name="name" type="text" autocomplete="name" placeholder="山田 花子" required>
+            </div>
+          </div>
+          <div class="form__row">
+            <label for="f-mail">メールアドレス <em>必須</em></label>
+            <input id="f-mail" name="email" type="email" autocomplete="email" placeholder="you@example.jp" required>
+          </div>
+          <div class="form__row">
+            <label for="f-msg">メッセージ</label>
+            <textarea id="f-msg" name="message" rows="4" placeholder="ご質問・ご要望など"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg btn--block">送信する</button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="#top" class="logo logo--light">
+          <span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 9a5 5 0 0 1 5-5h10a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5h-6l-5 5v-5a4 4 0 0 1-4-4z" fill="currentColor"/><path d="M12 13h8M16 9v8" stroke="#0b1530" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+          <span class="logo__text">Medi<b>Kataru</b></span>
+        </a>
+        <p class="footer__tagline">医療を、わかる言葉で。次の医療へ。</p>
+      </div>
+      <div class="footer__refs">
+        <p class="footer__refs-title">参考文献</p>
+        <ol>
+          <li>Kessels RPC. Patients' memory for medical information. <i>J R Soc Med.</i> 2003 May;96(5):219–222.</li>
+          <li>厚生労働省「我が国の人口について」</li>
+          <li><i>Health Lit Res Pract.</i> 2024 Sep 9;8(3):e175–e183.</li>
+          <li>AHRQ. <a href="https://www.ahrq.gov/health-literacy/improve/precautions/tool5.html" target="_blank" rel="noopener">Use the Teach-Back Method: Tool 5</a></li>
+        </ol>
+      </div>
+      <p class="footer__copy">© <span id="year">2026</span> MediKataru（仮称）</p>
+    </div>
+  </footer>
+
+  <a href="#contact" class="sticky-cta" id="stickyCta">お問い合わせ</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
