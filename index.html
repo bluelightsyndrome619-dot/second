@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MediKataru｜医療を、わかる言葉で。次の医療へ。</title>
-  <meta name="description" content="MediKataruは、医師・看護師の説明をAIが聞き取り、患者・家族にわかる言葉へ翻訳・要約。許可した家族と共有し、必要なときは医療者向けサマリーに切り替えて次の医療へつなぎます。">
+  <meta name="description" content="MediKataruは、医師・看護師の説明をAIが聞き取り、患者・家族にわかる言葉へ翻訳・要約。許可した家族と共有し、必要なときは医療者向けサマリーに切り替えて次の医療へつなぎます。次の受診に向けた経過まとめ機能、医師監修つき。">
   <meta property="og:title" content="MediKataru｜医療を、わかる言葉で。次の医療へ。">
   <meta property="og:description" content="「説明した」から「伝わった」へ。医療者の言葉を、患者・家族の理解に変えるAI。">
   <meta property="og:type" content="website">
@@ -29,6 +29,8 @@
         <a href="#problem">課題</a>
         <a href="#solution">サービス</a>
         <a href="#demo">デモ</a>
+        <a href="#visit">受診まとめ</a>
+        <a href="#review">医師監修</a>
         <a href="#story">ストーリー</a>
         <a href="#difference">差別化</a>
         <a href="#vision">ビジョン</a>
@@ -69,6 +71,8 @@
             <li>平易な言葉へ翻訳</li>
             <li>家族と共有</li>
             <li>医療者向けサマリー</li>
+            <li>受診前の経過まとめ</li>
+            <li>医師監修</li>
           </ul>
         </div>
 
@@ -281,11 +285,130 @@
       </div>
     </section>
 
+    <!-- ============ Visit Summary ============ -->
+    <section class="section section--tint" id="visit">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__num">04 — New Feature</p>
+          <h2 class="section__title">次の受診の前に、<br><span class="mark">経過を1枚に。</span></h2>
+          <p class="section__lead">患者さんのページの「🏥 次の受診のために → 経過のまとめを作る」を押すだけ。これまでの記録から、30秒〜1分ほどでその場にまとめができあがります。</p>
+        </div>
+
+        <div class="visit reveal">
+          <div class="visit__trigger">
+            <p class="visit__trigger-label">患者さんのページ</p>
+            <button type="button" class="visit__btn" tabindex="-1" aria-hidden="true">🏥 次の受診のために <span>→ 経過のまとめを作る</span></button>
+            <ul class="visit__trigger-notes">
+              <li>記録が<b>1件以上</b>あると表示されます</li>
+              <li>押してから<b>30秒〜1分</b>ほどで完成</li>
+              <li>受診のたびに<b>最新の記録から作り直し</b></li>
+            </ul>
+          </div>
+
+          <div class="visit__outputs">
+            <article class="visit__card">
+              <p class="visit__mode visit__mode--patient">ご本人・ご家族用</p>
+              <ol class="visit__list">
+                <li><b>これまでの流れ</b><span>日付つきで、何があったかをふり返り</span></li>
+                <li><b>いま続けていること</b><span>お薬・生活の注意</span></li>
+                <li><b>お医者さんに伝えること</b><span>前回からの変化など</span></li>
+                <li><b>お医者さんに聞くこと</b><span>聞き忘れを防ぐ質問リスト</span></li>
+              </ol>
+            </article>
+            <article class="visit__card visit__card--pro">
+              <p class="visit__mode visit__mode--pro">医師・看護師用</p>
+              <ol class="visit__list visit__list--pro">
+                <li><b>経過の要約</b></li>
+                <li><b>時系列</b></li>
+                <li><b>薬の変更の履歴</b></li>
+                <li><b>検査の推移</b></li>
+                <li><b>次回に確認すること</b></li>
+                <li><b>本人の申告</b></li>
+                <li><b>要確認の点</b></li>
+              </ol>
+            </article>
+          </div>
+        </div>
+
+        <div class="visit-points">
+          <article class="vpoint reveal">
+            <span class="vpoint__icon" aria-hidden="true">✍️</span>
+            <h3>メモの書き足し（任意）</h3>
+            <p>「最近、夜に息苦しい」などを書き足せます。AIはこれを<b>本人の申告</b>として扱い、医師の判断としては書きません。</p>
+          </article>
+          <article class="vpoint reveal">
+            <span class="vpoint__icon" aria-hidden="true">🖨️</span>
+            <h3>そのまま紙に印刷</h3>
+            <p>「このまとめを紙に印刷する」を押すと、<b>まとめの部分だけ</b>が紙に出ます。受付でそのまま渡せます。</p>
+          </article>
+          <article class="vpoint reveal">
+            <span class="vpoint__icon" aria-hidden="true">🛡️</span>
+            <h3>ハルシネーション対策</h3>
+            <p>ハルシネーション（AIが事実でないことを書くこと）を防ぐため、<b>記録に無い診断名・薬・数値は書かない</b>よう指示。記録どうしで食い違う点は「聞くこと／要確認」に回します。</p>
+          </article>
+          <article class="vpoint reveal">
+            <span class="vpoint__icon" aria-hidden="true">💡</span>
+            <h3>費用をおさえる設計</h3>
+            <p>もとの録音の文字は渡さず、<b>作成済みの要約だけ</b>をAIに渡します。使うのは新しい記録から<b>最大30件</b>です。</p>
+          </article>
+          <article class="vpoint reveal">
+            <span class="vpoint__icon" aria-hidden="true">🔄</span>
+            <h3>まとめは保存しない</h3>
+            <p>まとめ自体は保存せず、受診のたびに<b>最新の記録から作り直す</b>形です。古いまとめが残って混乱することを防ぎます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Doctor Review ============ -->
+    <section class="section" id="review">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__num">05 — Doctor Review</p>
+          <h2 class="section__title">AIまかせにしない。<br><span class="grad">医師監修</span>で、言葉を育てる。</h2>
+          <p class="section__lead">AIが判断に迷った言葉と前後の短い文だけを、管理者（医師）が確認します。名前や病院名などは消して保存します。</p>
+        </div>
+
+        <ol class="review-flow">
+          <li class="review-step reveal">
+            <span class="review-step__no">1</span>
+            <h3>AIが「迷った言葉」を見つける</h3>
+            <p>専門用語の平易化で、AIが判断に迷った言葉を自動で拾い出します。</p>
+          </li>
+          <li class="review-step reveal">
+            <span class="review-step__no">2</span>
+            <h3>個人を特定する情報を消す</h3>
+            <p>残すのは<b>その言葉と前後の短い文だけ</b>。名前や病院名などは消して保存します。</p>
+          </li>
+          <li class="review-step reveal">
+            <span class="review-step__no">3</span>
+            <h3>管理者（医師）が確認</h3>
+            <p>医学的な意味が正しく伝わる言い換えかを、医師がチェックします。</p>
+          </li>
+          <li class="review-step reveal">
+            <span class="review-step__no">4</span>
+            <h3>次の変換に活かす</h3>
+            <p>確認結果をAIの変換に反映。使われるほど、難しい言葉の言い換えが確かになっていきます。</p>
+          </li>
+        </ol>
+
+        <div class="review-example reveal">
+          <p class="review-example__label">医師が確認するもののイメージ</p>
+          <div class="review-example__body">
+            <p class="review-example__src">「…<mark>[氏名]</mark>さんは<mark>[病院名]</mark>で、<b>NYHA II度</b>と言われており…」</p>
+            <p class="review-example__arrow" aria-hidden="true">↓ 医師が確認</p>
+            <p class="review-example__fix">「NYHA II度」→ <b>「ふだんの生活では問題ないが、坂道や階段で息切れしやすい状態」</b></p>
+          </div>
+          <p class="review-example__note">※表示はイメージです。確認対象は、AIが判断に迷った言葉と前後の短い文に限られます。</p>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ Value ============ -->
     <section class="section section--tint" id="value">
       <div class="container">
         <div class="section__head reveal">
-          <p class="section__num">04 — Value</p>
+          <p class="section__num">06 — Value</p>
           <h2 class="section__title">関わるすべての人に、<br class="sp">価値を。</h2>
         </div>
         <div class="value-grid">
@@ -312,7 +435,7 @@
     <section class="section" id="story">
       <div class="container">
         <div class="section__head reveal">
-          <p class="section__num">05 — Vision Story</p>
+          <p class="section__num">07 — Vision Story</p>
           <h2 class="section__title">ある家族の、<br class="sp">MediKataruのある日常。</h2>
           <p class="section__lead">78歳の男性。妻と二人暮らし。心不全で近所の病院に通院中。長女は東京で暮らしている。</p>
         </div>
@@ -381,8 +504,8 @@
     <section class="section section--dark" id="difference">
       <div class="container">
         <div class="section__head reveal">
-          <p class="section__num">06 — Difference</p>
-          <h2 class="section__title">守るべき、<br class="sp">3つの差別化軸。</h2>
+          <p class="section__num">08 — Difference</p>
+          <h2 class="section__title">守るべき、<br class="sp">4つの差別化軸。</h2>
         </div>
 
         <div class="diff-grid">
@@ -412,7 +535,17 @@
             <ol class="diff__timeline">
               <li>外来</li><li>入院</li><li>病状説明</li><li>退院</li><li>在宅</li><li>再診</li>
             </ol>
-            <p>1回の診察で終わらせず、数か月・数年単位の経過を再要約します。</p>
+            <p>1回の診察で終わらせず、数か月・数年単位の経過を再要約。「次の受診のための経過まとめ」として提供中です。</p>
+          </article>
+          <article class="diff reveal">
+            <p class="diff__no">04</p>
+            <h3>Doctor in the Loop</h3>
+            <p class="diff__ja">AIが迷った言葉を、医師が確認して変換に反映</p>
+            <ul class="diff__list">
+              <li><b>確認するのは最小限</b>判断に迷った言葉と前後の短い文だけ</li>
+              <li><b>個人情報は消して保存</b>名前や病院名などは削除</li>
+            </ul>
+            <p>医師監修で、平易化の精度を継続的に高めます。</p>
           </article>
         </div>
 
@@ -436,7 +569,7 @@
     <section class="section" id="future">
       <div class="container">
         <div class="section__head reveal">
-          <p class="section__num">07 — Roadmap</p>
+          <p class="section__num">09 — Roadmap</p>
           <h2 class="section__title">これからの構想</h2>
         </div>
         <ol class="roadmap">
@@ -448,7 +581,7 @@
           <li class="roadmap__item reveal">
             <span class="roadmap__step">STEP 2</span>
             <h3>医療者向けの経過サマリーを高度化</h3>
-            <p>複数回の説明履歴から、入退院・救急受診時に必要な経過を自動でまとめ、患者の許可のもと医療者と共有します。</p>
+            <p>「次の受診のための経過まとめ」で第一歩を提供開始。今後は入退院・救急受診時に必要な経過まで広げ、患者の許可のもと医療者と共有します。</p>
           </li>
           <li class="roadmap__item reveal">
             <span class="roadmap__step">STEP 3</span>
